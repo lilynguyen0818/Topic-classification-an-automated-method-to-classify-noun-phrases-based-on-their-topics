@@ -1,0 +1,102 @@
+WARNING: this module has been deprecated and may be removed in the future,
+please see:
+https://docs.csc.fi/support/deprecate-conda/
+
+
+Currently Loaded Modules:
+  1) tensorflow/2.0.0
+
+ 
+
+srun python3 $*
++ srun python3 train.py
+2022-03-24 21:46:00.314094: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2022-03-24 21:46:00.350780: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Tesla V100-SXM2-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:62:00.0
+2022-03-24 21:46:01.795261: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2022-03-24 21:46:05.400559: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2022-03-24 21:46:07.912851: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2022-03-24 21:46:09.846190: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2022-03-24 21:46:16.505132: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2022-03-24 21:46:21.734558: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2022-03-24 21:46:25.782113: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2022-03-24 21:46:25.784366: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2022-03-24 21:46:25.784799: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2022-03-24 21:46:26.098122: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2100000000 Hz
+2022-03-24 21:46:26.101479: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5590c475fed0 executing computations on platform Host. Devices:
+2022-03-24 21:46:26.101505: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+2022-03-24 21:46:26.200969: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5590c478b190 executing computations on platform CUDA. Devices:
+2022-03-24 21:46:26.201003: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+2022-03-24 21:46:26.202211: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Tesla V100-SXM2-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:62:00.0
+2022-03-24 21:46:26.202249: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2022-03-24 21:46:26.202259: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2022-03-24 21:46:26.202265: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2022-03-24 21:46:26.202272: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2022-03-24 21:46:26.202278: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2022-03-24 21:46:26.202286: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2022-03-24 21:46:26.202292: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2022-03-24 21:46:26.204181: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2022-03-24 21:46:26.204212: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2022-03-24 21:46:26.403929: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-03-24 21:46:26.403971: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2022-03-24 21:46:26.403979: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2022-03-24 21:46:26.406258: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30593 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:62:00.0, compute capability: 7.0)
+2022-03-24 21:46:39.743941: W tensorflow/core/grappler/optimizers/implementation_selector.cc:310] Skipping optimization due to error while loading function libraries: Invalid argument: Functions '__inference___backward_standard_lstm_10829_11316' and '__inference___backward_cudnn_lstm_with_fallback_7931_8115_specialized_for_StatefulPartitionedCall_3_at___inference_distributed_function_11531' both implement 'lstm_978fca58-df6e-4963-9d53-e4f355eaf941' but their signatures do not match.
+2022-03-24 21:46:40.014287: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2022-03-24 21:46:50.780585: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2022-03-24 21:49:23.975064: W tensorflow/core/grappler/optimizers/implementation_selector.cc:310] Skipping optimization due to error while loading function libraries: Invalid argument: Functions '__inference_standard_lstm_75493' and '__inference_cudnn_lstm_with_fallback_75606_specialized_for_sequential_bidirectional_1_backward_lstm_1_StatefulPartitionedCall_at___inference_distributed_function_75873' both implement 'lstm_8dc557dc-ea8d-4a5d-91fc-ad62c308944f' but their signatures do not match.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding (Embedding)        (None, 20, 64)            64000     
+_________________________________________________________________
+bidirectional (Bidirectional (None, 20, 128)           66048     
+_________________________________________________________________
+bidirectional_1 (Bidirection (None, 64)                41216     
+_________________________________________________________________
+dense (Dense)                (None, 64)                4160      
+_________________________________________________________________
+dropout (Dropout)            (None, 64)                0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 6)                 390       
+=================================================================
+Total params: 175,814
+Trainable params: 175,814
+Non-trainable params: 0
+_________________________________________________________________
+Train on 664968 samples, validate on 166243 samples
+Epoch 1/15
+664968/664968 - 186s - loss: 0.6499 - accuracy: 0.7784 - val_loss: 0.7313 - val_accuracy: 0.7438
+Epoch 2/15
+664968/664968 - 149s - loss: 0.6250 - accuracy: 0.7852 - val_loss: 0.7341 - val_accuracy: 0.7460
+Epoch 3/15
+664968/664968 - 153s - loss: 0.6183 - accuracy: 0.7881 - val_loss: 0.7280 - val_accuracy: 0.7479
+Epoch 4/15
+664968/664968 - 147s - loss: 0.6142 - accuracy: 0.7899 - val_loss: 0.7241 - val_accuracy: 0.7484
+Epoch 5/15
+664968/664968 - 154s - loss: 0.6109 - accuracy: 0.7907 - val_loss: 0.7204 - val_accuracy: 0.7490
+Epoch 6/15
+664968/664968 - 148s - loss: 0.6074 - accuracy: 0.7921 - val_loss: 0.7251 - val_accuracy: 0.7496
+Epoch 7/15
+664968/664968 - 147s - loss: 0.6047 - accuracy: 0.7928 - val_loss: 0.7255 - val_accuracy: 0.7497
+Epoch 8/15
+664968/664968 - 154s - loss: 0.6014 - accuracy: 0.7938 - val_loss: 0.7240 - val_accuracy: 0.7494
+Epoch 9/15
+664968/664968 - 147s - loss: 0.5986 - accuracy: 0.7944 - val_loss: 0.7250 - val_accuracy: 0.7495
+Epoch 10/15
+664968/664968 - 154s - loss: 0.5959 - accuracy: 0.7958 - val_loss: 0.7240 - val_accuracy: 0.7497
+Epoch 11/15
+664968/664968 - 148s - loss: 0.5933 - accuracy: 0.7963 - val_loss: 0.7270 - val_accuracy: 0.7503
+Epoch 12/15
+664968/664968 - 147s - loss: 0.5907 - accuracy: 0.7969 - val_loss: 0.7205 - val_accuracy: 0.7502
+Epoch 13/15
+664968/664968 - 154s - loss: 0.5886 - accuracy: 0.7975 - val_loss: 0.7260 - val_accuracy: 0.7500
+Epoch 14/15
+664968/664968 - 148s - loss: 0.5864 - accuracy: 0.7979 - val_loss: 0.7287 - val_accuracy: 0.7496
+Epoch 15/15
+664968/664968 - 154s - loss: 0.5843 - accuracy: 0.7982 - val_loss: 0.7301 - val_accuracy: 0.7496
+All done
